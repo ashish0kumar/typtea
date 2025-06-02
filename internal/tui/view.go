@@ -137,10 +137,22 @@ func (m Model) renderResults() string {
 		boldStyle.Render(fmt.Sprintf("%.0f%%", stats.Accuracy)),
 	)
 
+	bestAccSection := lipgloss.JoinVertical(
+		lipgloss.Center,
+		mutedStyle.Render("best acc"),
+		boldStyle.Render(fmt.Sprintf("%.0f%%", stats.BestAccuracy)),
+	)
+
 	wpmSection := lipgloss.JoinVertical(
 		lipgloss.Right,
 		mutedStyle.Render("wpm"),
 		boldStyle.Render(fmt.Sprintf("%.0f", stats.WPM)),
+	)
+
+	bestWpmSection := lipgloss.JoinVertical(
+		lipgloss.Center,
+		mutedStyle.Render("best wpm"),
+		boldStyle.Render(fmt.Sprintf("%.0f", stats.BestWPM)),
 	)
 
 	timeSection := lipgloss.JoinVertical(
@@ -160,7 +172,11 @@ func (m Model) renderResults() string {
 		lipgloss.Top,
 		accSection,
 		strings.Repeat(" ", statGap),
+		bestAccSection,
+		strings.Repeat(" ", statGap),
 		wpmSection,
+		strings.Repeat(" ", statGap),
+		bestWpmSection,
 		strings.Repeat(" ", statGap),
 		timeSection,
 		strings.Repeat(" ", statGap),
