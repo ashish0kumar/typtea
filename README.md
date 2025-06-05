@@ -9,7 +9,7 @@
 </p>
 </div>
 
-<p align="center">Minimal terminal-based typing speed test with multiple programming language support</p>
+<p align="center">Minimal terminal-based typing speed test with support for dozens of programming languages</p>
 
 <br>
 <div align="center">
@@ -21,7 +21,7 @@
 ## Features
 
 - **Terminal-based typing** with WPM and accuracy tracking
-- **Multi-language support** including English and 14+ programming languages
+- **Multi-language support** including English and 30+ programming languages
 - **Infinite word generation** with smooth 3-line scrolling display
 - **Minimalist TUI** built with Bubble Tea and Lipgloss
 - **Embedded language data** for easy distribution
@@ -29,14 +29,18 @@
 
 ### Supported Languages
 
-| | | |
-|---|---|---|
-| English 1k | Javascript | TypeScript |
-| Python | Java | PHP |
-| C | C++ | C# |
-| Go |Rust | Bash |
-| HTML | CSS | SQL |
-| | | |
+| | | | |
+|-----------|-----------|-----------|-----------|
+| Bash      | C         | C++       | C#        |
+| Crystal   | CSS       | Emacs     | English 1k|
+| Erlang    | Go        | Haskell   | HTML      |
+| Java      | JavaScript| JSON      | Julia     |
+| Lisp      | Lua       | OCaml     | Perl      |
+| PHP       | PowerShell| Python    | R         |
+| Ruby      | Rust      | SCSS      | SQL       |
+| Swift     | TeX       | TypeScript| Vala      |
+| Vimscript | Wolfram   | YAML      | Zig       |
+| | | | |
 
 ---
 

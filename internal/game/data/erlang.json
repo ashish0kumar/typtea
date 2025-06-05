@@ -1,0 +1,29 @@
+{
+  "name": "Erlang",
+  "words": [
+    "after",
+    "begin",
+    "case",
+    "catch",
+    "cond",
+    "end",
+    "fun",
+    "if",
+    "let",
+    "of",
+    "receive",
+    "try",
+    "when",
+    "and",
+    "or",
+    "not",
+    "div",
+    "rem",
+    "band",
+    "bor",
+    "bxor",
+    "bnot",
+    "bsl",
+    "bsr"
+  ]
+}
