@@ -3,12 +3,16 @@ package game
 import (
 	"strings"
 	"time"
+	"fmt"
+	"github.com/ashish0kumar/typtea/internal/database"
 )
 
 // TypingStats holds the statistics for a game session
 type TypingStats struct {
 	WPM               float64
+	BestWPM			  float64
 	Accuracy          float64
+	BestAccuracy      float64
 	CharactersTyped   int
 	CorrectChars      int
 	TotalChars        int
@@ -242,9 +246,22 @@ func (g *TypingGame) GetStats() TypingStats {
 		accuracy = 0
 	}
 
+	if _, err := database.InsertStats(&database.Stats{WPM: netWPM, Accuracy: accuracy}); err != nil {
+		fmt.Println("Insert failed:", err)
+	}
+
+	maxStats, err := database.MaxStats()
+	if err != nil {
+		fmt.Println(err)
+		maxStats = &database.MaxStatsData{MaxWPM: 0, MaxAccuracy: 0}
+	}
+
+
 	return TypingStats{
 		WPM:               netWPM,
+		BestWPM:		   maxStats.MaxWPM,
 		Accuracy:          accuracy,
+		BestAccuracy:	   maxStats.MaxAccuracy,
 		CharactersTyped:   g.GlobalPos,
 		CorrectChars:      correctChars,
 		TotalChars:        len([]rune(g.GetDisplayText())),
