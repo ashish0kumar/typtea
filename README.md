@@ -47,22 +47,36 @@
 
 ## Installation
 
-### Arch Linux (AUR)
+[![Packaging status](https://repology.org/badge/vertical-allrepos/typtea.svg)](https://repology.org/project/typtea/versions)
+
+### AUR
 
 ```bash
 yay -S typtea
 ```
 
-### Void Linux
+### FreeBSD
 
 ```bash
-sudo xbps-install -S typtea
+pkg install typtea
+```
+
+### Homebrew
+
+```bash
+brew install typtea
 ```
 
 ### Nix
 
 ```bash
 nix profile install nixpkgs#typtea
+```
+
+### Void Linux
+
+```bash
+sudo xbps-install -S typtea
 ```
 
 ### Via `go install`
