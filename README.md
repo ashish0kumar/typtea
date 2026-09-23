@@ -179,13 +179,7 @@ This feature is not in the main branch to keep typtea minimal, but you can use i
 
 Contributions are always welcome! If you have ideas, bug reports, or want to submit code, please feel free to open an issue or a pull request.
 
-## Contributors
-
-<a href="https://github.com/ashish0kumar/typtea/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ashish0kumar/typtea" />
-</a>
-
-<br>
+<br><br>
 
 <p align="center">
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
